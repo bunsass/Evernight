@@ -1,182 +1,91 @@
 /**
- * @name R:March 7th Hunt Dark Mode: Refresh
- * @description discord.gg/march7th A cute theme based on March 7th from Honkai: Star Rail.
- * @author cinnakoko, refact0r, esme, anubis
- * @version 2.0.0
- * @invite march7th
- * @website https://github.com/kubiikoko/March-7th-Discord-Theme
- * @source https://github.com/kubiikoko/March-7th-Discord-Theme/blob/39c6e27882bd62b2d15a70b9f09d64109d4bd43b/m7h%20%20light.css
- * @authorId 852611391189286993
+ * @name Oguri Cap Theme (Blue & Brown)
+ * @description A Vencord-compatible Discord theme inspired by Oguri Cap from Uma Musume, with a blue and brown palette.
+ * @author Grok (inspired by cinnakoko, refact0r, esme, anubis)
+ * @version 1.1.0
+ * @invite uma-musashi
  */
 
-/* import theme modules */
-@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+/* Import base theme */
+@import url('https://github.com/cinnakoko/March-7th-Discord-Theme');
 
-/* Add background image to the Discord app */
-.appMount-3lHmNN {
-  background-image: url('https://raw.githubusercontent.com/bunsass/random/main/GxWOircaUAAkm7P.png?token=GHSAT0AAAAAADKT4VU6ZLPSOLZE6ZFYJKJI2F4KCMA');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Overlay for readability */
-#app-mount::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
-  z-index: -1;
-}
-
-/* Ensure panels remain readable with transparency */
-.theme-dark .layer-3QrUeG, .theme-dark .container-1D34oG {
-  background: rgba(74, 27, 31, 0.8); /* Matches --bg-3: #4a1b1f with transparency */
-}
-
-/* Original theme CSS */
 body {
-  --font: 'figtree';
-  --gap: 12px;
-  --divider-thickness: 4px;
-  --animations: on;
-  --list-item-transition: 0.2s ease;
-  --dms-icon-svg-transition: 0.4s ease;
-  --move-top-bar-buttons: off;
-  --custom-app-top-bar-height: 32px;
-  --custom-window-controls: on;
-  --window-control-size: 14px;
-  --dms-icon: on;
-  --dms-icon-svg-url: url('https://raw.githubusercontent.com/cinnakoko/March-7th-Discord-Theme/1185f75db623bd740f4a42f69abcb67dde1b01ce/assets/Asset%204.svg');
-  --dms-icon-svg-size: 90%;
-  --dms-icon-color-before: var(--icon-secondary);
-  --dms-icon-color-after: var(--white);
-  --guild-boosting-blue: #FF9A56, #D162A4, #FFFFFF;
-  --guild-boosting-purple: #FFFFFF, #D162A4, #FF9A56;
-  --dms-background: off;
-  --dms-background-image-url: url('');
-  --dms-background-image-size: cover;
-  --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
-  --transparency-tweaks: on;
-  --remove-bg-layer: on;
-  --panel-blur: on;
-  --blur-amount: 12px;
-  --bg-floating: var(--bg-3);
-  --small-user-panel: off;
+    --font: 'Noto Sans JP'; /* Clean, Japanese-inspired font */
+    --gap: 12px; /* Spacing between panels */
+    --divider-thickness: 4px; /* Unread messages divider thickness */
+    --animations: on; /* Enable animations */
+    --list-item-transition: 0.2s ease; /* Smooth transitions */
+    --dms-icon-svg-transition: 0.4s ease; /* DMs icon transition */
+    --move-top-bar-buttons: off; /* Default button placement */
+    --custom-app-top-bar-height: 32px; /* Titlebar height */
+    --custom-window-controls: on; /* Custom window controls */
+    --window-control-size: 14px; /* Window controls size */
+    --dms-icon: off; /* Disable custom DMs icon */
+    --dms-background: color; /* Use gradient for DMs background */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--brown-2), var(--blue-3)); /* Blue and brown gradient */
+    --transparency-tweaks: on; /* Enable transparency */
+    --remove-bg-layer: on; /* Remove base background layer */
+    --panel-blur: on; /* Blur panel backgrounds */
+    --blur-amount: 12px; /* Blur amount */
+    --bg-floating: var(--bg-3); /* Floating panels background */
+    --small-user-panel: off; /* Default user panel size */
 }
 
 /* Color options */
 :root {
-  --colors: on;
-  --text-0: var(--bg-4);
-  --text-1: hsl(220, 45%, 95%);
-  --text-2: hsl(220, 25%, 70%);
-  --text-3: hsl(220, 20%, 60%);
-  --text-4: hsl(222, 6%, 57%);
-  --text-5: hsl(219, 9%, 44%);
-  --backgroundblur: 0;
-  --bg-1: hsla(64, 81%, 67%, 0.308);
-  --bg-2: hsla(64, 86%, 54%, 0.308);
-  --bg-3: #4a1b1f;
-  --bg-4: hsla(323, 36%, 23%, 0.7);
-  --hover: hsla(221, 19%, 40%, 0.1);
-  --active: hsla(220, 19%, 40%, 0.2);
-  --active-2: hsla(220, 19%, 40%, 0.3);
-  --message-hover: hsla(230, 0%, 0%, 0.1);
-  --accent-1: #F2D0D9;
-  --accent-2: #F2D888;
-  --accent-3: #ee8ea8;
-  --accent-4: #eb819e;
-  --accent-5: hsl(344, 81%, 67%);
-  --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 60%, transparent);
-  --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 60%, transparent);
-  --accent-new: hsl(344, 81%, 67%);
-  --online: #a6da95;
-  --dnd: #ed8796;
-  --idle: #eed49f;
-  --streaming: #c6a0f6;
-  --offline: var(--text-4);
-  --border-light: hsl(230, 20%, 40%, 0.1);
-  --border: hsl(230, 20%, 40%, 0.2);
-  --button-border: hsl(0, 0%, 100%, 0.1);
-  --red-1: oklch(76% 0.12 0);
-  --red-2: oklch(70% 0.12 0);
-  --red-3: oklch(64% 0.12 0);
-  --red-4: oklch(58% 0.12 0);
-  --red-5: oklch(52% 0.12 0);
-  --green-1: oklch(76% 0.11 170);
-  --green-2: oklch(70% 0.11 170);
-  --green-3: oklch(64% 0.11 170);
-  --green-4: oklch(58% 0.11 170);
-  --green-5: oklch(52% 0.11 160);
-  --blue-1: oklch(76% 0.1 215);
-  --blue-2: oklch(70% 0.1 215);
-  --blue-3: oklch(64% 0.1 215);
-  --blue-4: oklch(58% 0.1 215);
-  --blue-5: oklch(52% 0.1 215);
-  --yellow-1: oklch(80% 0.11 90);
-  --yellow-2: oklch(74% 0.11 90);
-  --yellow-3: oklch(68% 0.11 90);
-  --yellow-4: oklch(62% 0.11 90);
-  --yellow-5: oklch(56% 0.11 90);
-  --purple-1: oklch(76% 0.11 310);
-  --purple-2: oklch(70% 0.11 310);
-  --purple-3: oklch(64% 0.11 310);
-  --purple-4: oklch(58% 0.11 310);
-  --purple-5: oklch(52% 0.11 310);
+    --colors: on; /* Enable custom colors */
+    --text-0: var(--bg-4); /* Text on colored elements */
+    --text-1: hsl(210, 20%, 95%); /* Light text (blue-tinted white) */
+    --text-2: hsl(210, 50%, 80%); /* Headings (light blue) */
+    --text-3: hsl(210, 30%, 70%); /* Normal text (medium blue) */
+    --text-4: hsl(30, 20%, 60%); /* Icons/channels (brown) */
+    --text-5: hsl(30, 15%, 50%); /* Muted text (darker brown) */
+    --bg-1: hsla(210, 50%, 60%, 0.3); /* Dark buttons clicked (blue) */
+    --bg-2: hsla(210, 55%, 50%, 0.3); /* Dark buttons (blue) */
+    --bg-3: hsl(30, 40%, 20%); /* Secondary elements (brown) */
+    --bg-4: hsla(210, 45%, 15%, 0.7); /* Main background (dark blue) */
+    --hover: hsla(210, 30%, 40%, 0.1); /* Hover effect (blue) */
+    --active: hsla(210, 30%, 40%, 0.2); /* Active state (blue) */
+    --active-2: hsla(210, 30%, 40%, 0.3); /* Extra button state (blue) */
+    --message-hover: hsla(210, 0%, 0%, 0.1); /* Message hover (neutral) */
+    --accent-1: hsl(210, 70%, 70%); /* Links (light blue) */
+    --accent-2: hsl(210, 80%, 65%); /* Unread/mentions (bright blue) */
+    --accent-3: hsl(30, 60%, 60%); /* Accent buttons (brown) */
+    --accent-4: hsl(30, 65%, 55%); /* Accent buttons hover (lighter brown) */
+    --accent-5: hsl(30, 70%, 50%); /* Accent buttons clicked (dark brown) */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 60%, transparent); /* Blue mention */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 60%, transparent); /* Blue mention hover */
+    --accent-new: hsl(210, 70%, 50%); /* Red elements replaced with blue */
+    --online: hsl(140, 50%, 60%); /* Green online (unchanged for clarity) */
+    --dnd: hsl(0, 60%, 60%); /* Red DND (unchanged) */
+    --idle: hsl(210, 70%, 65%); /* Blue idle */
+    --streaming: hsl(300, 50%, 60%); /* Purple streaming (unchanged) */
+    --offline: var(--text-4); /* Muted brown offline */
+    --border-light: hsl(210, 20%, 40%, 0.1); /* Light blue border */
+    --border: hsl(210, 20%, 40%, 0.2); /* Blue border */
+    --button-border: hsl(0, 0%, 100%, 0.1); /* Button border (unchanged) */
+    --blue-1: oklch(75% 0.1 240); /* Light blue */
+    --blue-2: oklch(70% 0.1 240); /* Medium blue */
+    --blue-3: oklch(65% 0.1 240); /* Darker blue */
+    --brown-1: oklch(70% 0.1 30); /* Light brown */
+    --brown-2: oklch(65% 0.1 30); /* Medium brown */
+    --brown-3: oklch(60% 0.1 30); /* Darker brown */
 }
 
-.visual-refresh .button_e131a9.buttonColor_e131a9, .visual-refresh .button_e131a9 .buttonColor_e131a9 {
-  background-color: #ce8e9f;
-  color: #F2D0D9;
-  border-color: var(--border-faint);
-  --interactive-active: #F2D0D9;
+/* Button styles */
+.visual-refresh .button_e131a9.buttonColor_e131a9, 
+.visual-refresh .button_e131a9 .buttonColor_e131a9 {
+    background-color: var(--accent-3); /* Brown buttons */
+    color: var(--text-1); /* Light blue-tinted text */
+    border-color: var(--border); /* Blue border */
+    --interactive-active: var(--accent-1); /* Light blue on interaction */
 }
 
 .visual-refresh .iconBadge__650eb.base__2b1f5 {
-  color: #F2D0D9;
+    color: var(--accent-1); /* Light blue badges */
 }
 
-.visual-refresh .content_c48ade {
-  background-image: url('https://github.com/cinnakoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20dark.png?raw=true');
-}
-
-.bar_c38106[data-windows=true] {
-  background-image: url('https://github.com/cinnakoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20dark.png?raw=true');
-}
-
+/* Sidebar background */
 .itemsContainer_ef3116, .tree_ef3116 {
-  background-color: rgba(80, 38, 64);
-}
-
-:root {
-  --folder-icon-1: url("https://github.com/kubiikoko/March-7th-Discord-Theme/blob/main/assets/hunt%20icon%20folder.png?raw=true");
-}
-
-[aria-label="Servers"] {
-  & > * {
-    --folder-icon: var(--folder-icon-1);
-    --position-left: 11.5px;
-    --fill: currentColor;
-  }
-  [aria-owns^="folder-items-"] > [class^="folderIconWrapper_"] {
-    position: relative;
-    [class^="closedFolderIconWrapper_"], [class^="expandedFolderIconWrapper_"] {
-      display: none;
-    }
-    &::after {
-      background-image: var(--folder-icon);
-      background-size: cover;
-      background-repeat: no-repeat;
-      content: "";
-      position: absolute;
-      top: 12px;
-      left: var(--position-left);
-      width: 24px;
-      height: 24px;
-    }
-  }
+    background-color: hsla(30, 40%, 20%, 0.8); /* Semi-transparent brown */
 }
