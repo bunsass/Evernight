@@ -1,0 +1,133 @@
+/**
+ * @name March 7th Dark Red Preservation
+ * @description A Vencord-compatible Discord theme based on March 7th from Honkai: Star Rail, recolored to dark red.
+ * @author Grok (based on cinnakoko, refact0r, esme, anubis)
+ * @version 2.0.1
+ * @invite march7th
+ * @website https://github.com/kubiikoko/March-7th-Discord-Theme
+ * @source https://github.com/kubiikoko/March-7th-Discord-Theme
+ * @authorId 852611391189286993
+ */
+
+/* Import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    --font: 'figtree'; /* Font */
+    --gap: 12px; /* Spacing between panels */
+    --divider-thickness: 4px; /* Thickness of unread messages divider and highlighted message borders */
+    --animations: on; /* Enable animations */
+    --list-item-transition: 0.2s ease; /* Transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* Transition for DMs icon */
+    --move-top-bar-buttons: off; /* Keep inbox button in default position */
+    --custom-app-top-bar-height: 32px; /* Titlebar height */
+    --custom-window-controls: on; /* Custom window controls */
+    --window-control-size: 14px; /* Size of custom window controls */
+    --dms-icon: on; /* Use custom DM icon */
+    --dms-icon-svg-url: url('https://raw.githubusercontent.com/cinnakoko/March-7th-Discord-Theme/3a34cb165a0546a20d430ba81ca06fa684da35b5/assets/Vm8o6R01.svg'); /* March 7th DM icon */
+    --dms-icon-svg-size: 90%; /* Size of DM icon SVG */
+    --dms-icon-color-before: var(--icon-secondary); /* Normal DM icon color */
+    --dms-icon-color-after: var(--text-1); /* DM icon color when hovered/selected */
+    --dms-background: off; /* Disable DM background image/color */
+    --transparency-tweaks: off; /* Disable transparency tweaks */
+    --remove-bg-layer: off; /* Keep base background layer */
+    --panel-blur: on; /* Enable panel blur */
+    --blur-amount: 12px; /* Blur amount */
+    --bg-floating: var(--bg-3); /* Floating panels background */
+    --small-user-panel: off; /* Default user panel size */
+    background: url('https://pbs.twimg.com/media/GxWOircaUAAkm7P?format=jpg&name=4096x4096') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Color options */
+:root {
+    --colors: on; /* Enable custom colors */
+    --text-0: var(--bg-4); /* Text on colored elements */
+    --text-1: hsl(0, 50%, 95%); /* Bright text (light red) */
+    --text-2: hsl(0, 60%, 85%); /* Headings (light red) */
+    --text-3: hsl(0, 40%, 80%); /* Normal text (medium red) */
+    --text-4: hsl(0, 30%, 70%); /* Icons/channels (muted red) */
+    --text-5: hsl(0, 25%, 60%); /* Muted channels/timestamps (darker red) */
+    --bg-1: hsla(0, 60%, 40%, 0.3); /* Dark buttons clicked (dark red) */
+    --bg-2: hsla(0, 55%, 45%, 0.3); /* Dark buttons (dark red) */
+    --bg-3: hsl(0, 50%, 30%); /* Secondary elements (deep red) */
+    --bg-4: hsla(0, 50%, 20%, 0.7); /* Main background (very dark red) */
+    --hover: hsla(0, 40%, 40%, 0.1); /* Hover effect (red) */
+    --active: hsla(0, 40%, 40%, 0.2); /* Active state (red) */
+    --message-hover: hsla(0, 40%, 40%, 0.2); /* Message hover (red) */
+    --accent-1: hsl(0, 70%, 70%); /* Links (light red) */
+    --accent-2: hsl(0, 80%, 65%); /* Unread/mentions (bright red) */
+    --accent-3: hsl(0, 60%, 50%); /* Accent buttons (medium red) */
+    --accent-4: hsl(0, 65%, 45%); /* Accent buttons hover (darker red) */
+    --accent-5: hsl(0, 70%, 40%); /* Accent buttons clicked (dark red) */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 60%, transparent); /* Red mention */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 60%, transparent); /* Red mention hover */
+    --accent-new: hsl(0, 70%, 40%); /* Red elements (dark red) */
+    --online: hsl(140, 50%, 60%); /* Green online (unchanged for clarity) */
+    --dnd: hsl(0, 60%, 60%); /* Red DND (matches palette) */
+    --idle: hsl(40, 70%, 65%); /* Yellow idle (unchanged for clarity) */
+    --streaming: hsl(300, 50%, 60%); /* Purple streaming (unchanged) */
+    --offline: var(--text-4); /* Muted red offline */
+    --border-light: hsl(0, 20%, 40%, 0.1); /* Light red border */
+    --border: hsl(0, 20%, 40%, 0.2); /* Red border */
+    --button-border: hsl(0, 0%, 100%, 0.1); /* Neutral button border */
+    --red-1: oklch(70% 0.15 0); /* Light red */
+    --red-2: oklch(60% 0.15 0); /* Medium red */
+    --red-3: oklch(50% 0.15 0); /* Dark red */
+    --red-4: oklch(45% 0.15 0); /* Darker red */
+    --red-5: oklch(40% 0.15 0); /* Very dark red */
+}
+
+/* Button styles */
+.visual-refresh .button_e131a9.buttonColor_e131a9, 
+.visual-refresh .button_e131a9 .buttonColor_e131a9 {
+    background-color: var(--accent-3); /* Medium red buttons */
+    color: var(--text-1); /* Light red text */
+    border-color: var(--border); /* Red border */
+    --interactive-active: var(--accent-1); /* Light red on interaction */
+}
+
+.visual-refresh .iconBadge__650eb.base__2b1f5 {
+    color: var(--accent-1); /* Light red badges */
+}
+
+/* Sidebar background */
+.itemsContainer_ef3116, .tree_ef3116 {
+    background-color: hsla(0, 50%, 20%, 0.8); /* Semi-transparent dark red */
+}
+
+/* Folder icon */
+:root {
+    --folder-icon-1: url("https://github.com/cinnakoko/March-7th-Discord-Theme/raw/refs/heads/main/assets/folder%20icon%20preservation.webp");
+}
+
+[aria-label="Servers"] {
+    & > * {
+        --folder-icon: var(--folder-icon-1);
+        --position-left: 11.5px;
+        --fill: currentColor;
+    }
+    [aria-owns^="folder-items-"] > [class^="folderIconWrapper_"] {
+        position: relative;
+        [class^="closedFolderIconWrapper_"],
+        [class^="expandedFolderIconWrapper_"] {
+            display: none;
+        }
+        &::after {
+            background-image: var(--folder-icon);
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: var(--position-left);
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+/* Chat border */
+.chat_f75fb0 > .subtitleContainer_f75fb {
+    border: 1px solid var(--accent-1); /* Light red border */
+}
