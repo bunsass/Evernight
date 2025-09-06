@@ -1,5 +1,5 @@
 /**
- * @name R:March 7th Hunt Light Mode: Refresh
+ * @name R:March 7th Hunt Dark Mode: Refresh
  * @description discord.gg/march7th A cute theme based on March 7th from Honkai: Star Rail.
  * @author cinnakoko, refact0r, esme, anubis
  * @version 2.0.0
@@ -14,7 +14,7 @@
 
 /* Add background image to the Discord app */
 .appMount-3lHmNN {
-  background-image: url('https://media.discordapp.net/attachments/1409968012357927124/1413899526770790591/GxWOircaUAAkm7P.png?ex=68bd9c0c&is=68bc4a8c&hm=ad34b0c956ede363fb8d8bc111a81b8d6f40da6899229998120e486a81b08a58&=&width=1872&height=796');
+  background-image: url('https://raw.githubusercontent.com/bunsass/random/main/GxWOircaUAAkm7P.png?token=GHSAT0AAAAAADKT4VU6ZLPSOLZE6ZFYJKJI2F4KCMA');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,13 +28,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Adjust opacity for contrast */
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
   z-index: -1;
 }
 
 /* Ensure panels remain readable with transparency */
-.theme-light .layer-3QrUeG, .theme-light .container-1D34oG {
-  background: rgba(222, 147, 179, 0.8); /* Matches --bg-3: #DE93B3 with transparency */
+.theme-dark .layer-3QrUeG, .theme-dark .container-1D34oG {
+  background: rgba(74, 27, 31, 0.8); /* Matches --bg-3: #4a1b1f with transparency */
 }
 
 /* Original theme CSS */
@@ -60,8 +60,8 @@ body {
   --dms-background-image-url: url('');
   --dms-background-image-size: cover;
   --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
-  --transparency-tweaks: off;
-  --remove-bg-layer: off;
+  --transparency-tweaks: on;
+  --remove-bg-layer: on;
   --panel-blur: on;
   --blur-amount: 12px;
   --bg-floating: var(--bg-3);
@@ -72,95 +72,84 @@ body {
 :root {
   --colors: on;
   --text-0: var(--bg-4);
-  --text-1: #decbcb;
-  --text-2: #333;
-  --text-3: #333;
-  --text-4: #333;
-  --text-5: #333;
+  --text-1: hsl(220, 45%, 95%);
+  --text-2: hsl(220, 25%, 70%);
+  --text-3: hsl(220, 20%, 60%);
+  --text-4: hsl(222, 6%, 57%);
+  --text-5: hsl(219, 9%, 44%);
   --backgroundblur: 0;
-  --bg-1: #cbf1c9;
-  --bg-2: #6d856b;
-  --bg-3: #DE93B3;
-  --bg-4: hsla(0, 88%, 91%, 0.1);
-  --hover: hsla(312, 15%, 53%, 0.1);
-  --active: hsla(315, 15%, 53%, 0.2);
-  --message-hover: hsla(330, 47%, 64%, 0.213);
-  --accent-1: #91737b;
+  --bg-1: hsla(64, 81%, 67%, 0.308);
+  --bg-2: hsla(64, 86%, 54%, 0.308);
+  --bg-3: #4a1b1f;
+  --bg-4: hsla(323, 36%, 23%, 0.7);
+  --hover: hsla(221, 19%, 40%, 0.1);
+  --active: hsla(220, 19%, 40%, 0.2);
+  --active-2: hsla(220, 19%, 40%, 0.3);
+  --message-hover: hsla(230, 0%, 0%, 0.1);
+  --accent-1: #F2D0D9;
   --accent-2: #F2D888;
   --accent-3: #ee8ea8;
   --accent-4: #eb819e;
   --accent-5: hsl(344, 81%, 67%);
+  --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 60%, transparent);
+  --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 60%, transparent);
   --accent-new: hsl(344, 81%, 67%);
   --online: #a6da95;
   --dnd: #ed8796;
   --idle: #eed49f;
   --streaming: #c6a0f6;
-  --offline: #5e5b5b;
+  --offline: var(--text-4);
   --border-light: hsl(230, 20%, 40%, 0.1);
   --border: hsl(230, 20%, 40%, 0.2);
   --button-border: hsl(0, 0%, 100%, 0.1);
-  --list-item-transition: 0.2s ease;
-}
-
-.wrapper__2ea32 .link__2ea32 {
-  transition: margin-left var(--list-item-transition);
-}
-.wrapper__2ea32:hover .link__2ea32 {
-  margin-left: 10px;
-}
-.unread__2ea32 {
-  border-radius: 50%;
-  width: 8px;
-  height: 8px;
-  margin-left: -4px;
-  transition: var(--list-item-transition);
-}
-.wrapper__2ea32:hover .unread__2ea32 {
-  width: 12px;
-  height: 12px;
-  margin-top: -6px;
-  margin-left: 3px;
-  background-color: transparent;
-  background: url('https://cdn.discordapp.com/emojis/1265593470131900488.webp?size=48');
-  background-size: 12px;
-  background-position: center;
+  --red-1: oklch(76% 0.12 0);
+  --red-2: oklch(70% 0.12 0);
+  --red-3: oklch(64% 0.12 0);
+  --red-4: oklch(58% 0.12 0);
+  --red-5: oklch(52% 0.12 0);
+  --green-1: oklch(76% 0.11 170);
+  --green-2: oklch(70% 0.11 170);
+  --green-3: oklch(64% 0.11 170);
+  --green-4: oklch(58% 0.11 170);
+  --green-5: oklch(52% 0.11 160);
+  --blue-1: oklch(76% 0.1 215);
+  --blue-2: oklch(70% 0.1 215);
+  --blue-3: oklch(64% 0.1 215);
+  --blue-4: oklch(58% 0.1 215);
+  --blue-5: oklch(52% 0.1 215);
+  --yellow-1: oklch(80% 0.11 90);
+  --yellow-2: oklch(74% 0.11 90);
+  --yellow-3: oklch(68% 0.11 90);
+  --yellow-4: oklch(62% 0.11 90);
+  --yellow-5: oklch(56% 0.11 90);
+  --purple-1: oklch(76% 0.11 310);
+  --purple-2: oklch(70% 0.11 310);
+  --purple-3: oklch(64% 0.11 310);
+  --purple-4: oklch(58% 0.11 310);
+  --purple-5: oklch(52% 0.11 310);
 }
 
 .visual-refresh .button_e131a9.buttonColor_e131a9, .visual-refresh .button_e131a9 .buttonColor_e131a9 {
-  background-color: #ee8ea8;
-  color: #fcd2d2;
+  background-color: #ce8e9f;
+  color: #F2D0D9;
   border-color: var(--border-faint);
-  --interactive-active: #fcd2d2;
+  --interactive-active: #F2D0D9;
 }
 
-.visual-refresh .iconBadge__650eb.base__2b1f5, .container__9293f {
-  --card-secondary-bg: #fcd2d2;
+.visual-refresh .iconBadge__650eb.base__2b1f5 {
+  color: #F2D0D9;
 }
 
 .visual-refresh .content_c48ade {
-  background-image: url('https://github.com/kubiikoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20light.png?raw=true');
+  background-image: url('https://github.com/cinnakoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20dark.png?raw=true');
 }
 
 .bar_c38106[data-windows=true] {
-  background-image: url('https://github.com/kubiikoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20light.png?raw=true');
+  background-image: url('https://github.com/cinnakoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20dark.png?raw=true');
 }
 
 .itemsContainer_ef3116, .tree_ef3116 {
-  background-color: #fcd2d2;
-}
-
-.visual-refresh .container__133bf > .container__9293f {
-  background-color: #fcd2d2;
-}
-
-.visual-refresh, .wrapper__14245 {
-  background-color: #DE93B3;
-}
-
-.visual-refresh .header_c0e32c, .header_c0e32c {
-  background-color: #DE93B3;
-  border-top-left-radius: 0%;
-  border-top-right-radius: 0%;
+  background-color: rgba(80, 38, 64);
 }
 
 :root {
@@ -190,61 +179,4 @@ body {
       height: 24px;
     }
   }
-}
-
-.visual-refresh .theme-light {
-  --custom-status-bubble-background-color: #ffeeee;
-}
-
-.visual-refresh .inspector_aeaaeb, .unicodeShortcut_b9ee0c, .visual-refresh .soundboardHeader__08434, .visual-refresh .picker__09f65, .visual-refresh .header__8ef02, .visual-refresh .header_fed6d3, .visual-refresh .standardStickerShortcut__3ad28, .content_fed6d3 {
-  background-color: #DE93B3;
-}
-
-.scroller_affa7e {
-  background-color: #DE93B3;
-}
-
-.visual-refresh .wrapper__14245, .keybindHint__46002, .lookFilled__201d5.colorPrimary__201d5 {
-  background-color: #DE93B3;
-}
-
-.itemsContainer_ef3116 {
-  background-color: #de93b48a;
-}
-
-.categoryItemDefaultCategorySelected_b9ee0c, .stickerCategoryGenericSelected__3ad28 {
-  background-color: #fcd2d2;
-}
-
-.soundButtonRefresh__6d4ed, .categoryIcon_a1e0e0.selected_a1e0e0, .soundButton__6d4ed {
-  background: #fcd2d2;
-}
-
-.theme-light .emojiItem_fc7141.emojiItemSelected_fc7141, .theme-light .emojiItem_fc7141.expandCollapseButtonSelected_fc7141 {
-  background-color: #fcd2d2;
-}
-
-.accountProfileCard__1fed1 {
-  background-color: #decbcb;
-}
-
-.username_c19a55, .name__5d473 {
-  filter: hue-rotate(1deg) !important;
-  text-shadow: 1px 1px 0 #a89d9d8f;
-}
-
-.text-md\/normal_cf4812, .tierCardCurrentTier_be48d0, .heading-xxl\/bold_cf4812, .heading-xxl\/semibold_cf4812 {
-  color: black !important;
-}
-
-.lookFilled_dd4f85 .contents_dd4f85, .lookLink_dd4f85 .contents_dd4f85, .lookOutlined_dd4f85 .contents_dd4f85 {
-  color: #333;
-}
-
-.theme-light .card_ea2a21 {
-  border-color: #DE93B3;
-}
-
-.item_d90b3d {
-  color: rgb(73, 60, 60);
 }
