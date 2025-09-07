@@ -1,6 +1,6 @@
 /**
  * @name R:March 7th Hunt Darker Red Mode: Refresh
- * @description discord.gg/march7th A cute theme based on March 7th from Honkai: Star Rail, recolored to darker red with custom background.
+ * @description discord.gg/march7th A cute theme based on March 7th from Honkai: Star Rail, recolored to darker red with custom background and enhanced notifications.
  * @author cinnakoko, refact0r, esme, anubis
  * @version 2.0.0
  * @invite march7th
@@ -39,12 +39,10 @@ body {
     --guild-boosting-purple: #FFFFFF, #5A2323, #3A1414;
     /* dms button background options */
     --dms-background: off; /* off to disable, image to use a background image, color to use a custom color/gradient */
-    --dms-background-image-url: url(''); /* url of the background image */
-    --dms-background-image-size: cover; /* size of the background image (css background-size) */
     --dms-background-color: linear-gradient(70deg, #3A1414, #5A2323, #6B2D2D); /* darker red gradient */
-    /* background image options */
+    /* background image settings */
     --background-image: on; /* enable background image */
-    --background-image-url: url('https://example.com/GxWOircaUAAkm7P.png'); /* REPLACE WITH ACTUAL URL */
+    --background-image-url: url('https://raw.githubusercontent.com/bunsass/evernight-discord-theme/main/asset/GxWOircaUAAkm7P.png'); /* actual image URL */
     /* transparency/blur options */
     --transparency-tweaks: off; /* turn on to remove some elements for better transparency */
     --remove-bg-layer: off; /* turn on to remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
@@ -55,10 +53,10 @@ body {
     --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
 }
 
-/* Apply background image to body */
+/* Apply background image to body with fallback color */
 body {
-    background: var(--background-image-url) no-repeat center center fixed;
-    background-size: cover; /* use cover to fill entire background */
+    background: var(--background-image-url) no-repeat center center fixed, hsla(0, 60%, 15%, 0.7); /* fallback to --bg-4 */
+    background-size: cover;
 }
 
 /* color options */
@@ -77,21 +75,21 @@ body {
     --bg-2: #5A2323; /* dark buttons, darker red */
     --bg-3: #6B2D2D; /* spacing, secondary elements, dark red */
     --bg-4: hsla(0, 60%, 15%, 0.7); /* main background color, semi-transparent very dark red */
-    --hover: hsla(0, 50%, 20%, 0.1); /* channels and buttons when hovered, subtle dark red */
-    --active: hsla(0, 50%, 20%, 0.2); /* channels and buttons when clicked or selected */
-    --message-hover: hsla(0, 50%, 25%, 0.2); /* messages when hovered, darker red */
+    --hover: hsla(0, 50%, 30%, 0.2); /* slightly brighter and more opaque for better visibility */
+    --active: hsla(0, 50%, 30%, 0.3); /* more noticeable active state */
+    --message-hover: hsla(0, 60%, 85%, 0.3); /* very light red for hovered messages */
     /* accent colors */
     --accent-1: #8B3A3A; /* links, medium dark red */
-    --accent-2: #C65A5A; /* general unread/mention elements, lighter red */
+    --accent-2: #F5D0D0; /* unread/mention elements, very light red for theme cohesion */
     --accent-3: #6B2D2D; /* accent buttons, dark red */
     --accent-4: #8B3A3A; /* accent buttons when hovered, medium dark red */
     --accent-5: #5A2323; /* accent buttons when clicked, darker red */
-    --accent-new: #5A2323; /* messages when hovered, matches clicked accent */
+    --accent-new: #F5D0D0; /* messages when hovered, matches unread color */
     /* status indicator colors */
-    --online: #A6DA95; /* kept green for contrast */
+    --online: #8B3A3A; /* medium dark red for online */
     --dnd: #ED8796; /* kept red, aligns with theme */
-    --idle: #EED49F; /* kept yellow for contrast */
-    --streaming: #C6A0F6; /* kept purple for contrast */
+    --idle: #C65A5A; /* lighter red for idle */
+    --streaming: #6B2D2D; /* dark red for streaming */
     --offline: #5E5B5B; /* kept gray for contrast */
     /* border colors */
     --border-light: hsla(0, 50%, 20%, 0.1); /* light border color, dark red tint */
@@ -108,20 +106,23 @@ body {
 }
 .unread__2ea32 {
     border-radius: 50%;
-    width: 8px;
-    height: 8px;
-    margin-left: -4px;
+    width: 12px; /* larger for visibility */
+    height: 12px;
+    margin-left: -6px;
+    background-color: #F5D0D0; /* very light red for theme cohesion */
+    box-shadow: 0 0 4px rgba(245, 208, 208, 0.7); /* subtle glow matching very light red */
     transition: var(--list-item-transition);
 }
 .wrapper__2ea32:hover .unread__2ea32 {
-    width: 12px;
-    height: 12px;
-    margin-top: -6px;
-    margin-left: 3px;
-    background-color: transparent;
+    width: 16px; /* larger on hover */
+    height: 16px;
+    margin-top: -8px;
+    margin-left: 2px;
+    background-color: #FFFFFF; /* white on hover for stronger contrast */
     background: url('https://cdn.discordapp.com/emojis/1265593470131900488.webp?size=48');
-    background-size: 12px;
+    background-size: 16px;
     background-position: center;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); /* white glow on hover */
 }
 
 /* Adjusted button colors for darker red theme */
@@ -135,16 +136,12 @@ body {
     --card-secondary-bg: #5A2323; /* darker red */
 }
 .visual-refresh .content_c48ade {
-    background-image: url('https://raw.githubusercontent.com/bunsass/random/main/asset/GxWOircaUAAkm7P.png?token=GHSAT0AAAAAADKT4VU7O6KH6FKSM4F5LAJ62F5ASJQ'); /* REPLACE WITH ACTUAL URL */
-    background-size: cover; /* use cover to fill entire background */
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: var(--background-image-url) no-repeat center center, hsla(0, 60%, 15%, 0.7); /* fallback to --bg-4 */
+    background-size: cover;
 }
 .bar_c38106[data-windows=true] {
-    background-image: url('https://raw.githubusercontent.com/bunsass/random/main/asset/GxWOircaUAAkm7P.png?token=GHSAT0AAAAAADKT4VU7O6KH6FKSM4F5LAJ62F5ASJQ'); /* REPLACE WITH ACTUAL URL */
-    background-size: cover; /* use cover to fill entire background */
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: var(--background-image-url) no-repeat center center, hsla(0, 60%, 15%, 0.7); /* fallback to --bg-4 */
+    background-size: cover;
 }
 .itemsContainer_ef3116, .tree_ef3116 {
     background-color: #5A2323; /* darker red */
@@ -215,8 +212,8 @@ body {
     background-color: #F5D0D0; /* very light red for contrast */
 }
 .username_c19a55, .name__5d473 {
-    filter: hue-rotate(0deg) !important; /* adjusted to avoid unnecessary hue shift */
-    text-shadow: 1px 1px 0 #5A2323; /* darker red shadow */
+    filter: hue-rotate(0deg) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* stronger black shadow for contrast */
 }
 .text-md\/normal_cf4812, .tierCardCurrentTier_be48d0, .heading-xxl\/bold_cf4812, .heading-xxl\/semibold_cf4812 {
     color: #FFFFFF !important; /* white for readability */
