@@ -1,0 +1,303 @@
+/**
+ * @name Custom Animated Discord Theme
+ * @description A customizable theme with unique animations and configurable background
+ * @author YourName
+ * @version 1.0.0
+ * @source YourGithubURL
+*/
+
+/* Import base theme */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+/* ========================================
+   CONFIGURATION SECTION - Edit these!
+   ======================================== */
+
+body {
+    /* ===== FONT ===== */
+    --font: 'figtree';
+    
+    /* ===== SIZES ===== */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    
+    /* ===== ANIMATIONS ===== */
+    --animations: on;
+    --list-item-transition: 0.3s ease;
+    
+    /* ===== TOP BAR ===== */
+    --move-top-bar-buttons: off;
+    --custom-app-top-bar-height: 32px;
+    
+    /* ===== WINDOW CONTROLS ===== */
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+    
+    /* ===== DMS ICON - Cyrene Crystal Diamond ===== */
+    --dms-icon: on;
+    --dms-icon-svg-url: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIENlbnRlciBEaWFtb25kIC0tPgogIDxwYXRoIGQ9Ik0xMiAzTDE4IDEyTDEyIDIxTDYgMTJMMTIgM1oiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgogIDwhLS0gVG9wIExlZnQgSGVhcnQgLS0+CiAgPHBhdGggZD0iTTQuNSA0LjVDNC41IDQuNSAzIDUuNSAzIDdDMyA4LjUgNC41IDEwIDQuNSAxMEM0LjUgMTAgMyA4LjUgMyA3QzMgNS41IDQuNSA0LjUgNC41IDQuNVoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgogIDxwYXRoIGQ9Ik01LjUgNUw2LjUgN0w0LjUgNy41TDUuNSA1WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgPCEtLSBUb3AgUmlnaHQgSGVhcnQgLS0+CiAgPHBhdGggZD0iTTE5LjUgNC41QzE5LjUgNC41IDIxIDUuNSAyMSA3QzIxIDguNSAxOS41IDEwIDE5LjUgMTBDMTkuNSAxMCAyMSA4LjUgMjEgN0MyMSA1LjUgMTkuNSA0LjUgMTkuNSA0LjVaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KICA8cGF0aCBkPSJNMTguNSA1TDE3LjUgN0wxOS41IDcuNUwxOC41IDVaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KICA8IS0tIEJvdHRvbSBMZWZ0IEhlYXJ0IC0tPgogIDxwYXRoIGQ9Ik00LjUgMTkuNUM0LjUgMTkuNSAzIDE4LjUgMyAxN0MzIDE1LjUgNC41IDE0IDQuNSAxNEM0LjUgMTQgMyAxNS41IDMgMTdDMyAxOC41IDQuNSAxOS41IDQuNSAxOS41WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgPHBhdGggZD0iTTUuNSAxOUw2LjUgMTdMNC41IDE2LjVMNS41IDE5WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgPCEtLSBCb3R0b20gUmlnaHQgSGVhcnQgLS0+CiAgPHBhdGggZD0iTTE5LjUgMTkuNUMxOS41IDE5LjUgMjEgMTguNSAyMSAxN0MyMSAxNS41IDE5LjUgMTQgMTkuNSAxNEMxOS41IDE0IDIxIDE1LjUgMjEgMTdDMjEgMTguNSAxOS41IDE5LjUgMTkuNSAxOS41WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgPHBhdGggZD0iTTE4LjUgMTlMMTcuNSAxN0wxOS41IDE2LjVMMTguNSAxOVoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8L3N2Zz4='); /* Cyrene's crystal diamond with hearts */
+    --dms-icon-svg-size: 80%;
+    --dms-icon-color-before: #FFB8D8;
+    --dms-icon-color-after: #FFA8E8;
+    
+    /* ===== DMS BACKGROUND ===== */
+    --dms-background: off;
+    
+    /* ===== BACKGROUND IMAGE SETTINGS ===== */
+    --background-image: on; /* IMPORTANT: enable background */
+    --background-image-url: url('https://raw.githubusercontent.com/bunsass/Evernight/main/asset/Cyrene-2025-11-02-19h31m17s638.png'); /* CHANGE THIS URL */
+    
+    /* ===== TRANSPARENCY/BLUR ===== */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 0px;
+    --bg-floating: hsla(240, 30%, 15%, 0.8);
+    
+    /* ===== OTHER ===== */
+    --small-user-panel: off;
+}
+
+/* Apply background image to body */
+body {
+    background: var(--background-image-url) no-repeat center center fixed, hsla(240, 30%, 12%, 0.7);
+    background-size: cover;
+}
+
+/* ========================================
+   COLOR THEME CONFIGURATION
+   ======================================== */
+
+:root {
+    --colors: on;
+    
+    /* ===== PRIMARY COLORS - EDIT THESE ===== */
+    --primary-color: #6B4DE6;
+    --primary-light: #9B7EFF;
+    --primary-dark: #4B2DB6;
+    --primary-glow: rgba(107, 77, 230, 0.4);
+    
+    /* Text colors */
+    --text-0: #1A1625;
+    --text-1: #FFFFFF;
+    --text-2: #FFFFFF;
+    --text-3: #E8E0F5;
+    --text-4: #B8A8D8;
+    --text-5: #8870A8;
+    
+    /* Background colors */
+    --bg-1: #1A1625;
+    --bg-2: #251E35;
+    --bg-3: #2F2640;
+    --bg-4: hsla(240, 30%, 12%, 0.7);
+    
+    /* Hover states */
+    --hover: hsla(258, 60%, 60%, 0.15);
+    --active: hsla(258, 60%, 60%, 0.25);
+    --message-hover: hsla(258, 60%, 60%, 0.1);
+    
+    /* Accent colors */
+    --accent-1: var(--primary-color);
+    --accent-2: var(--primary-light);
+    --accent-3: var(--primary-dark);
+    --accent-4: var(--primary-light);
+    --accent-5: var(--primary-dark);
+    
+    /* Status colors */
+    --online: var(--primary-color);
+    --dnd: #ED8796;
+    --idle: #9B7EFF;
+    --streaming: var(--primary-dark);
+    --offline: #5E5B5B;
+    
+    /* Borders */
+    --border-light: hsla(258, 60%, 60%, 0.1);
+    --border: hsla(258, 60%, 60%, 0.2);
+}
+
+/* ========================================
+   ANIMATED UNREAD INDICATORS
+   ======================================== */
+
+.wrapper__2ea32 .link__2ea32 {
+    transition: margin-left var(--list-item-transition);
+}
+
+.wrapper__2ea32:hover .link__2ea32 {
+    margin-left: 10px;
+}
+
+/* Unread dot with pulse animation */
+.unread__2ea32 {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-glow);
+    transition: var(--list-item-transition);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Hover effect with spin */
+.wrapper__2ea32:hover .unread__2ea32 {
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    margin-left: 0px;
+    background: url('https://cdn.discordapp.com/emojis/1425682139701317652.webp?size=96') center/contain no-repeat;
+    background-color: transparent;
+    box-shadow: 0 0 12px var(--primary-glow);
+    animation: spin 1s ease-in-out;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* ========================================
+   CHANNEL LIST ANIMATIONS
+   ======================================== */
+
+[class*="containerDefault"] {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+[class*="containerDefault"]:hover {
+    padding-left: 8px;
+    background: linear-gradient(90deg, var(--primary-glow) 0%, transparent 100%);
+}
+
+[class*="containerDefault"]:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-glow);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 60%;
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   BACKGROUND OVERRIDES
+   ======================================== */
+
+.visual-refresh .content_c48ade {
+    background: var(--background-image-url) no-repeat center center, hsla(240, 30%, 12%, 0.7);
+    background-size: cover;
+}
+
+.bar_c38106[data-windows=true] {
+    background: var(--background-image-url) no-repeat center center, hsla(240, 30%, 12%, 0.7);
+    background-size: cover;
+}
+
+/* ========================================
+   PANEL STYLING
+   ======================================== */
+
+.visual-refresh .button_e131a9.buttonColor_e131a9,
+.visual-refresh .button_e131a9 .buttonColor_e131a9 {
+    background-color: var(--primary-dark);
+    color: var(--text-1);
+    transition: all 0.3s ease;
+}
+
+.visual-refresh .button_e131a9.buttonColor_e131a9:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+.itemsContainer_ef3116,
+.tree_ef3116 {
+    background-color: var(--bg-2);
+}
+
+.visual-refresh .container__133bf > .container__9293f {
+    background-color: var(--bg-2);
+}
+
+.visual-refresh,
+.wrapper__14245 {
+    background-color: var(--bg-3);
+}
+
+.visual-refresh .header_c0e32c,
+.header_c0e32c {
+    background-color: var(--bg-3);
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+
+.scroller_affa7e {
+    background-color: var(--bg-3);
+}
+
+.visual-refresh .wrapper__14245,
+.lookFilled__201d5.colorPrimary__201d5 {
+    background-color: var(--bg-3);
+}
+
+.itemsContainer_ef3116 {
+    background-color: hsla(240, 30%, 15%, 0.54);
+}
+
+/* ========================================
+   MESSAGE HOVER EFFECTS
+   ======================================== */
+
+[class*="message-"]:hover {
+    background-color: var(--message-hover) !important;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+    box-shadow: 0 0 8px var(--primary-glow);
+}
